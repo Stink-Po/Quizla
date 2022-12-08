@@ -55,7 +55,7 @@ class QuizInterFace:
             correct_answer = list_name[4]
             self.category_label.config(text=f"Category :   {category.title()}")
             self.difficulty_label.config(text=f"Difficulty :   {difficulty.title()}")
-            self.score_label.config(text=f"Score :   {self.quizz.score} / {self.quizz.question_number - 1}")
+            self.score_label.config(text=f"Score :   {self.quizz.score} / {len(self.quizz.question_list)}")
             self.write()
         else:
             self.canvas.itemconfig(self.question_text, text=f"You rich the end of the Quizz your final Score is:"
